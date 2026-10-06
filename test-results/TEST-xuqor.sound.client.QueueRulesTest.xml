@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="xuqor.sound.client.QueueRulesTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-06T08:31:52.929Z" hostname="ubuntu" time="0.043">
+  <properties/>
+  <testcase name="shuffleNeverRepeatsCurrent()" classname="xuqor.sound.client.QueueRulesTest" time="0.017"/>
+  <testcase name="emptyQueueStops()" classname="xuqor.sound.client.QueueRulesTest" time="0.001"/>
+  <testcase name="manualNextDoesNotRepeatOne()" classname="xuqor.sound.client.QueueRulesTest" time="0.001"/>
+  <testcase name="repeatOneReplaysOnEnd()" classname="xuqor.sound.client.QueueRulesTest" time="0.001"/>
+  <testcase name="repeatAllWraps()" classname="xuqor.sound.client.QueueRulesTest" time="0.001"/>
+  <testcase name="singletonShuffleStopsWithoutRepeat()" classname="xuqor.sound.client.QueueRulesTest" time="0.001"/>
+  <testcase name="singletonRepeatAllLoops()" classname="xuqor.sound.client.QueueRulesTest" time="0.0"/>
+  <testcase name="repeatOffStopsAtEnd()" classname="xuqor.sound.client.QueueRulesTest" time="0.0"/>
+  <testcase name="repeatCycleHasThreeModes()" classname="xuqor.sound.client.QueueRulesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

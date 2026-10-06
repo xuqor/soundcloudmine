@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "soundcloudmine",
+  "version": "${version}",
+  "name": "SoundCloud Mine",
+  "description": "A minimal rounded streaming music player. M to open.",
+  "authors": [
+    "xuqor"
+  ],
+  "contact": {},
+  "license": "CC0-1.0",
+  "icon": "assets/soundcloudmine/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "xuqor.sound.client.SoundcloudmineClient"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "soundcloudmine.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

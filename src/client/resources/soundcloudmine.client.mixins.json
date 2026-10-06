@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "xuqor.sound.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "OverlayMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
