@@ -4,10 +4,10 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.*;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.minecraft.client.*;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.TitleScreen;
+import xuqor.sound.client.mixin.ScreenInvoker;
 import net.minecraft.resources.Identifier;
 import org.lwjgl.glfw.GLFW;
 import xuqor.sound.client.api.SoundCloudApi;
@@ -27,9 +27,9 @@ public final class SoundcloudmineClient implements ClientModInitializer {
         API.setClientId(settings.clientId);PLAYER.volume(settings.volume);
         KeyMapping key=KeyBindingHelper.registerKeyBinding(new KeyMapping("key.soundcloudmine.open",
                 GLFW.GLFW_KEY_M,KeyMapping.Category.register(Identifier.fromNamespaceAndPath("soundcloudmine","player"))));
-        ScreenEvents.AFTER_INIT.register((mc, screen, scaledWidth, scaledHeight) -> {
+        net.fabricmc.fabric.api.client.screen.v1.ScreenEvents.AFTER_INIT.register((mc, screen, scaledWidth, scaledHeight) -> {
             if (screen instanceof TitleScreen) {
-                screen.addRenderableWidget(Button.builder(net.minecraft.network.chat.Component.translatable("key.soundcloudmine.open"),
+                ((ScreenInvoker)(Object)screen).soundcloudmine$addRenderableWidget(Button.builder(net.minecraft.network.chat.Component.translatable("key.soundcloudmine.open"),
                         button -> mc.setScreen(new PlayerScreen(screen)))
                         .bounds(scaledWidth / 2 - 100, scaledHeight / 4 + 120, 200, 20).build());
             }
